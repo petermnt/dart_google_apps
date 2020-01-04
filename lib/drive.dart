@@ -35,7 +35,23 @@ class File {
 class Folder {
   external String getName();
   external String getId();
+  external FileIterator getFiles();
+  external FolderIterator getFolders();
   external Folder createFolder(String name);
   external Folder addFile(File child);
   external Folder removeFile(File file);
+}
+
+@JS()
+class FileIterator {
+  external String getContinuationToken()
+  external bool hasNext()
+  external Folder next()
+}
+
+@JS()
+class FolderIterator {
+  external String getContinuationToken()
+  external bool hasNext()
+  external Folder next()
 }
