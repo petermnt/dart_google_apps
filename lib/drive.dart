@@ -36,7 +36,7 @@ class File {
 class FileIterator {
   external String getContinuationToken()
   external bool hasNext()
-  external Folder next()
+  external File next()
 }
 
 @JS()
@@ -54,7 +54,7 @@ class Folder {
 class FolderIterator {
   external String getContinuationToken()
   external bool hasNext()
-  external File next()
+  external Folder next()
 }
 
 @JS()
