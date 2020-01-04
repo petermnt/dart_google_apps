@@ -34,9 +34,9 @@ class File {
 
 @JS()
 class FileIterator {
-  external String getContinuationToken()
-  external bool hasNext()
-  external File next()
+  external String getContinuationToken();
+  external bool hasNext();
+  external File next();
 }
 
 @JS()
@@ -52,12 +52,12 @@ class Folder {
 
 @JS()
 class FolderIterator {
-  external String getContinuationToken()
-  external bool hasNext()
-  external Folder next()
+  external String getContinuationToken();
+  external bool hasNext();
+  external Folder next();
 }
 
 @JS()
 class Blob {
-  external String getDataAsString()
+  external String getDataAsString();
 }
