@@ -29,6 +29,14 @@ class DriveApp {
 class File {
   external String getId();
   external String getDownloadUrl();
+  external Blob getBlob();
+}
+
+@JS()
+class FileIterator {
+  external String getContinuationToken()
+  external bool hasNext()
+  external Folder next()
 }
 
 @JS()
@@ -43,15 +51,13 @@ class Folder {
 }
 
 @JS()
-class FileIterator {
-  external String getContinuationToken()
-  external bool hasNext()
-  external Folder next()
-}
-
-@JS()
 class FolderIterator {
   external String getContinuationToken()
   external bool hasNext()
-  external Folder next()
+  external File next()
+}
+
+@JS()
+class Blob {
+  external String getDataAsString()
 }
