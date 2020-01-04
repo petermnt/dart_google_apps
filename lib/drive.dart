@@ -22,6 +22,7 @@ class DriveApp {
   external static File createFile(String name, String content);
   external static Folder getRootFolder();
   external static File getFileById(String id);
+  external static Folder getFolderById(String id);
 }
 
 @JS()
@@ -32,6 +33,7 @@ class File {
 
 @JS()
 class Folder {
+  external String getName();
   external String getId();
   external Folder createFolder(String name);
   external Folder addFile(File child);
